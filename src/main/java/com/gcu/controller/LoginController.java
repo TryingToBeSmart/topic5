@@ -47,7 +47,7 @@ public class LoginController {
 	public String doLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model) {
 		//check for validation errors
 		if(bindingResult.hasErrors()) {
-			model.addAttribute("title", "Loging Form");
+			model.addAttribute("title", "Login Form");
 			return "login";
 		}
 		

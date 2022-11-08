@@ -1,16 +1,24 @@
 package com.gcu.model;
 
+/**
+ * This class creates objects that can be read by the orders.html for thymeleaf
+ * by way of OrdersBusinessService.java which is used by LoginController.java to
+ * send all of the info to orders.html
+ * @author jjk14
+ *
+ */
+
 public class OrderModel {
-	private long id;
+	private String id;
 	private String orderNo;
 	private String productName;
 	private float price;
 	private int quantity;
 	
-	public long getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getOrderNo() {
@@ -37,7 +45,7 @@ public class OrderModel {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public OrderModel(long id, String orderNo, String productName, float price, int quantity) {
+	public OrderModel(String id, String orderNo, String productName, float price, int quantity) {
 		super();
 		this.id = id;
 		this.orderNo = orderNo;
